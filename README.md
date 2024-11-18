@@ -152,6 +152,7 @@ func main() {
 ```
 
 ## 조건문
+```go
 package main
 
 import "fmt"
@@ -234,3 +235,4 @@ func main() {
 
 }
 
+```
