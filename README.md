@@ -4,6 +4,7 @@
 - [표준 입출력](#표준-입출력)
 - [변수와 상수, 데이터타입](#변수와-상수-데이터타입)
 - [연산자](#연산자)
+- [조건문](#조건문)
 
 ## 표준 입출력
 ```go
@@ -149,4 +150,87 @@ func main() {
 }
 
 ```
+
+## 조건문
+package main
+
+import "fmt"
+
+func main() {
+
+	// if
+
+	// 기본 if
+	var a = 10
+	if a == 1 {
+		fmt.Println("One")
+	} else if a == 2 {
+		fmt.Println("Two")
+	} else {
+		fmt.Println("Other")
+	} // Other
+
+	// optional statement
+	if b := a * 2; b >= 20 {
+		fmt.Println("Big or Same")
+	} else {
+		fmt.Println("Small")
+	} // Big or Same
+
+	// switch
+
+	// 문자열, 여러 개 동시 비교
+	var os = "windows"
+	switch os {
+	case "":
+		fmt.Println("Unknown OS")
+	case "windows":
+		fmt.Println("Windows")
+	case "linux":
+		fmt.Println("Linux")
+	case "android", "ios":
+		fmt.Println("Mobile OS")
+	default:
+		fmt.Println("Unknown OS")
+	} // Windows
+
+	// 조건식 사용
+	var score = 80
+	switch {
+	case score >= 90:
+		fmt.Println("A")
+	case score >= 80:
+		fmt.Println("B")
+	default:
+		fmt.Println("C")
+	} // B
+
+	// 타입 체크
+	var val interface{} = 20
+	switch val.(type) {
+	case int:
+		fmt.Println("Integer")
+	case string:
+		fmt.Println("String")
+	default:
+		fmt.Println("Unknown")
+	} // Integer
+
+	// fallthrough (Go에서는 break가 기본. fallthrough를 사용하면 다음 case로 이동)
+	var val2 = 2
+	switch val2 {
+	case 1:
+		fmt.Println("1 이상")
+		fallthrough
+	case 2:
+		fmt.Println("2 이상")
+		fallthrough
+	case 3:
+		fmt.Println("3 이상")
+		fallthrough
+	default:
+		fmt.Println("default")
+	} // 2 이상, 3 이상, default
+
+}
 
