@@ -23,3 +23,10 @@ go.work.sum
 
 # env file
 .env
+
+# 테스트용 go 파일 및 goland 파일들은 제외
+/.idea/.gitignore
+/.idea/Golang-Grammar.iml
+/.idea/modules.xml
+/.idea/vcs.xml
+main.go
