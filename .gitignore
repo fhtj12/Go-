@@ -29,4 +29,5 @@ go.work.sum
 /.idea/Golang-Grammar.iml
 /.idea/modules.xml
 /.idea/vcs.xml
-main.go
+/src/
+/go.mod
